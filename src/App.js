@@ -3,7 +3,12 @@ import axios from 'axios';
 import MainPage from './MainPage';
 import Header from './header';
 import Footer from './footer';
-import "./App.css";
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  text-align: center;
+  background-color: #282c34;
+`;
 
 function App() {
 
@@ -21,11 +26,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <StyledDiv>
         <Header dataprops={data}/>
         <MainPage dataprops={data}/>
         <Footer />
-    </div>
+    </StyledDiv>
   );
 }
 
